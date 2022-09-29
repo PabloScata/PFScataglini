@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "Caudex", "docktrin";
+    src: url(../asses/BRANDING/Fuentes/Caudex-Regular.ttf), url(../asses/BRANDING/Fuentes/docktrin.ttf);
+}
+
+.fondo {
+    background-image: url("../asses/img/DSC_3167.JPG");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #958e8b;
+    font-family: "Caudex";
+    text-align: center;
+    height: 800px;
+}
+
+h1 {
+    padding: 20px;
+}
+
+.menuNav {
+    background-color: #432616;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    /* background: rgb(78,67,61);
+    background: linear-gradient(0deg, rgba(78,67,61,0.9416141456582633) 0%, rgba(67,38,22,0.9304096638655462) 100%); */
+}
+
+.listaMenu {
+    list-style: none;
+    font-family: "Caudex";
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    align-items: center;
+}
+.logo{
+    width: 100px;
+    transition: all 0.3s;
+    margin-left: 2em;
+}
+.logo:hover{
+    transform: scale(1.2, 1.2);
+    color: #4e433d;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.piePagina{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    background-color: #432616;
+    font-family: "Caudex";
+    /* background: rgb(67,38,22);
+    background: linear-gradient(0deg, rgba(67,38,22,0.9304096638655462) 0%, rgba(78,67,61,1) 100%); */
+    margin-left:0px;
+    margin-bottom:0px;
+    height: 110px;
+    width:100%
+}
+.rrss{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.datos{
+    color: white;
+    padding: 20px;
+}
+footer nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.nosotros-main{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2em;
+    height: 400px;
+}
+/*Contacto*/
+.contacto-main{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2em;
+    height: 400px;
+}
+.formulario{
+    width: 22em;
+    height: 20em;
+}
+.boton-formulario{
+    display: block;
+    width: 5em;
+    background-color: #4e433d
+}
+.ubicación{
+width: 20em;
+height: 20em;
+}
+input{
+    display: block;
+}
+.tituloGin{
+    font-family: "Caudex";
+    display: flex;
+    justify-content: center;
+}
+.flex-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.foto{
+    width: 15em;
+    border-radius: 0.7em;
+    box-shadow: 0.2em 0.2em 1em 0.2em #4e433d;
+    margin: 1em;
+}
+/* .foto:hover{
+    transform: scale(1.5, 1.5);
+} */
+
+/*Cocteleria*/
+.container-fondo{
+    background-color: #958e8b;
+}
+
+.container-main{
+    display: grid;
+    grid-row-gap: 0.5em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5em 30em 30em;
+    grid-template-areas: 
+        ". titulo ."
+        "foto1 contenido1 ."
+        ". contenido2 foto2"
+}
+
+.titulo{
+    grid-area: titulo;
+    font-family: "Caudex";
+}
+.trago1{
+    grid-area: contenido1;
+    font-family: "Caudex";
+}
+.trago2{
+    grid-area: contenido2;
+    font-family: "Caudex";
+}
+.container-foto1{
+    grid-area: foto1;
+    margin-left: 4em;
+}
+.container-foto2{
+    grid-area: foto2;
+}
+
+.coctel{
+    width: 18em;
+    border-radius: 0.7em;
+}
+
+/*Responsive celular*/
+@media screen and(min-width: 360px) and(max-width: 767px){
+    .container-main{
+        grid-row-gap: 0.5em;
+        grid-template-columns: 100%;
+        grid-template-rows: 5em 30em 20em 30em 20em;
+        grid-template-areas: 
+            "titulo"
+            "foto1"
+            "contenido1"
+            "foto2"
+            "contenido2" 
+    }
+}
+
+/*Responsive tablet*/
+@media screen and(min-width: 768px) and (max-width: 1023){
+    .container-main{
+        grid-row-gap: 0.5em;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 5em 30em 30em;
+        grid-template-areas: 
+            ". titulo"
+            "foto1 contenido1"
+            "contenido2 foto2"
+    }
+}
+
+/*Responsive escritorio*/
+@media screen and(min-width: 1024px){
+    .container-main{
+        grid-row-gap: 0.5em;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 5em 30em 30em;
+        grid-template-areas: 
+            ". titulo ."
+            "foto1 contenido1 ."
+            ". contenido2 foto2"
+    }
+}
