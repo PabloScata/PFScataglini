@@ -12,7 +12,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: #958e8b;
     font-family: "Caudex";
     text-align: center;
     height: 800px;
@@ -28,8 +27,6 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
-    /* background: rgb(78,67,61);
-    background: linear-gradient(0deg, rgba(78,67,61,0.9416141456582633) 0%, rgba(67,38,22,0.9304096638655462) 100%); */
 }
 
 .listaMenu {
@@ -61,8 +58,6 @@ header nav ul li a{
     justify-content: space-around;
     background-color: #432616;
     font-family: "Caudex";
-    /* background: rgb(67,38,22);
-    background: linear-gradient(0deg, rgba(67,38,22,0.9304096638655462) 0%, rgba(78,67,61,1) 100%); */
     margin-left:0px;
     margin-bottom:0px;
     height: 110px;
@@ -118,6 +113,11 @@ input{
     display: flex;
     justify-content: center;
 }
+
+/*Galeria*/
+.galeria-main{
+    background-color: #958e8b
+}
 .flex-container{
     display: flex;
     flex-flow: row wrap;
@@ -126,12 +126,9 @@ input{
 .foto{
     width: 15em;
     border-radius: 0.7em;
-    box-shadow: 0.2em 0.2em 1em 0.2em #4e433d;
+    box-shadow: 0.2em 0.2em 1em 0.2em #362a24;
     margin: 1em;
 }
-/* .foto:hover{
-    transform: scale(1.5, 1.5);
-} */
 
 /*Cocteleria*/
 .container-fondo{
@@ -140,46 +137,14 @@ input{
 
 .container-main{
     display: grid;
-    grid-row-gap: 0.5em;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 5em 30em 30em;
-    grid-template-areas: 
-        ". titulo ."
-        "foto1 contenido1 ."
-        ". contenido2 foto2"
-}
-
-.titulo{
-    grid-area: titulo;
-    font-family: "Caudex";
-}
-.trago1{
-    grid-area: contenido1;
-    font-family: "Caudex";
-}
-.trago2{
-    grid-area: contenido2;
-    font-family: "Caudex";
-}
-.container-foto1{
-    grid-area: foto1;
-    margin-left: 4em;
-}
-.container-foto2{
-    grid-area: foto2;
-}
-
-.coctel{
-    width: 18em;
-    border-radius: 0.7em;
 }
 
 /*Responsive celular*/
-@media screen and(min-width: 360px) and(max-width: 767px){
+@media only screen and (min-width: 360px) and(max-width: 767px){
     .container-main{
-        grid-row-gap: 0.5em;
-        grid-template-columns: 100%;
-        grid-template-rows: 5em 30em 20em 30em 20em;
+        grid-row-gap: 1em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5em 10em 10em 10em 10em;
         grid-template-areas: 
             "titulo"
             "foto1"
@@ -187,12 +152,30 @@ input{
             "foto2"
             "contenido2" 
     }
+    .titulo{
+        grid-area: titulo;
+        font-family: "Caudex";
+    }
+    .trago1{
+        grid-area: contenido1;
+        font-family: "Caudex";
+    }
+    .container-foto1{
+        grid-area: foto1;
+    }
+    .trago2{
+        grid-area: contenido2;
+        font-family: "Caudex";
+    }
+    .container-foto2{
+        grid-area: foto2;
+    }
 }
 
 /*Responsive tablet*/
-@media screen and(min-width: 768px) and (max-width: 1023){
+@media only screen and (min-width: 768px) and (max-width: 1023){
     .container-main{
-        grid-row-gap: 0.5em;
+        grid-row-gap: 1em;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 5em 30em 30em;
         grid-template-areas: 
@@ -200,10 +183,28 @@ input{
             "foto1 contenido1"
             "contenido2 foto2"
     }
+    .titulo{
+        grid-area: titulo;
+        font-family: "Caudex";
+    }
+    .trago1{
+        grid-area: contenido1;
+        font-family: "Caudex";
+    }
+    .container-foto1{
+        grid-area: foto1;
+    }
+    .trago2{
+        grid-area: contenido2;
+        font-family: "Caudex";
+    }
+    .container-foto2{
+        grid-area: foto2;
+    }
 }
 
 /*Responsive escritorio*/
-@media screen and(min-width: 1024px){
+@media only screen and (min-width: 1024px){
     .container-main{
         grid-row-gap: 0.5em;
         grid-template-columns: repeat(3, 1fr);
@@ -212,5 +213,29 @@ input{
             ". titulo ."
             "foto1 contenido1 ."
             ". contenido2 foto2"
+    }
+    .titulo{
+        grid-area: titulo;
+        font-family: "Caudex";
+    }
+    .trago1{
+        grid-area: contenido1;
+        font-family: "Caudex";
+    }
+    .trago2{
+        grid-area: contenido2;
+        font-family: "Caudex";
+    }
+    .container-foto1{
+        grid-area: foto1;
+        margin-left: 4em;
+    }
+    .container-foto2{
+        grid-area: foto2;
+    }
+    
+    .coctel{
+        width: 15em;
+        border-radius: 0.7em;
     }
 }
